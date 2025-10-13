@@ -25,7 +25,7 @@ public class IntegerListTest
 //--------------------------------------
     public static void dispatch(int choice)
     {
-        int loc;
+        // int loc;
         switch(choice)
         {
             case 0:
@@ -35,10 +35,20 @@ public class IntegerListTest
                 System.out.println("How big should the list be?");
                 int size = scan.nextInt();
                 list = new IntegerList(size);
-                list.randomize();
+                // list.randomize();
                 break;
             case 2:
                 list.print();
+                break;
+            case 3:
+                System.err.println("Enter the integer you want to add : ");
+                int elementToAdd = scan.nextInt();
+                list.addElement(elementToAdd);
+                break;
+            case 4:
+                System.err.println("Enter the integer you want to remove : ");
+                int elementToRemove = scan.nextInt();
+                list.removeFirst(elementToRemove);
                 break;
             default:
                 System.out.println("Sorry, invalid choice");
@@ -54,6 +64,8 @@ public class IntegerListTest
         System.out.println("0: Quit");
         System.out.println("1: Create a new list (** do this first!! **)");
         System.out.println("2: Print the list");
+        System.out.println("3: Add an integer to the list");
+        System.out.println("4: Remove the first occurence of an Integer");
         System.out.print("\nEnter your choice: ");
     }
 }
