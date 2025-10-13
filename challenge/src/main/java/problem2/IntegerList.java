@@ -46,27 +46,39 @@ public class IntegerList
         length_list++;
     }
 
-    public void removeFirst(int newVal){
+    public boolean removeFirst(int newVal){
         int[] new_list = new int[list.length];
         int removal = 0;
-        for (int i=0; i<length_list; i++){
+        for (int i=0; i<length_list-1; i++){
             if ((list[i] == newVal) && (removal == 0)){
                 removal = 1;
                 length_list--;
                 numInteger--;
-                continue;
             }
             if (removal == 0){
                 new_list[i] = list[i];
             }
             else{
-                new_list[i-1] = list[i];
+                new_list[i] = list[i+1];
             }
         }
-        if (removal == 1){
-            new_list[length_list-1] = list[length_list];
+        if ((removal == 0 && list[length_list-1]!=newVal) || (removal==1)){
+            new_list[length_list-1] = list[length_list-1];
+        }
+        else if (removal == 0){
+            removal = 1;
+            length_list--;
+            numInteger--;
         }
         list = new_list;
-        
+        return (removal==1)? true : false;
+
+    }
+
+    public void removeAll(int newVal){
+        boolean condition = removeFirst(newVal);
+        while (condition){
+            condition = removeFirst(newVal);
+        }
     }
 }

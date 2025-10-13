@@ -2,9 +2,9 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="challenge" target="17" />
-      <module name="challenge.main" target="17" />
-      <module name="challenge.test" target="17" />
+      <module name="challenge" target="21" />
+      <module name="challenge.main" target="21" />
+      <module name="challenge.test" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>

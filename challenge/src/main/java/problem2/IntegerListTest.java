@@ -50,6 +50,11 @@ public class IntegerListTest
                 int elementToRemove = scan.nextInt();
                 list.removeFirst(elementToRemove);
                 break;
+            case 5:
+                System.err.println("Enter the integer you want to remove entirely: ");
+                int elementToRemoveAll = scan.nextInt();
+                list.removeAll(elementToRemoveAll);
+                break;
             default:
                 System.out.println("Sorry, invalid choice");
         }
@@ -62,10 +67,11 @@ public class IntegerListTest
         System.out.println("\n Menu ");
         System.out.println(" ====");
         System.out.println("0: Quit");
-        System.out.println("1: Create a new list (** do this first!! **)");
+        System.out.println("1: Create a new list (the list will be empty at first)");
         System.out.println("2: Print the list");
         System.out.println("3: Add an integer to the list");
         System.out.println("4: Remove the first occurence of an Integer");
+        System.out.println("5: Remove the integer you want to remove from the list");
         System.out.print("\nEnter your choice: ");
     }
 }
