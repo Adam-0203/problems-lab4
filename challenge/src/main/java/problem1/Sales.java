@@ -4,7 +4,7 @@ public class Sales
 {
     public static void main(String[] args)
     {
-        final int SALESPEOPLE = 5; // a final variable
+        final int SALESPEOPLE = 5; // a final attribute
         int[] sales = new int[SALESPEOPLE];
         int sum;
         Scanner scan = new Scanner(System.in);
