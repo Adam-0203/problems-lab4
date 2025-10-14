@@ -49,7 +49,8 @@ public class IntegerList
     public boolean removeFirst(int newVal){
         int[] new_list = new int[list.length];
         int removal = 0;
-        for (int i=0; i<length_list-1; i++){
+        int var = length_list -1;
+        for (int i=0; i<var; i++){
             if ((list[i] == newVal) && (removal == 0)){
                 removal = 1;
                 length_list--;
