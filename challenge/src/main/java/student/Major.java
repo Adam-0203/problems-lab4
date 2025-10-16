@@ -91,4 +91,8 @@ public class Major {
         return studentsString.toString();
     }
 
+    @Override
+    public String toString(){
+        return code +" "+ name;
+    }
 }

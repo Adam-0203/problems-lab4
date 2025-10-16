@@ -22,5 +22,10 @@ public class Person {
     public String getLastName(){return secondName;}
     public String getPhone(){return phone;}
     public String getEmail(){return email;}
+
+    @Override
+    public String toString(){
+        return firstName +" "+ secondName;
+    }
 }
 
